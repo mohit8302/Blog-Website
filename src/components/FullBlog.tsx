@@ -1,6 +1,5 @@
 import { Blog } from "../hooks";
 import { AppBar } from "./Appbar";
-import { Avatar } from "./BlogCard";
 import PopupShow from "./PopupShow";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
@@ -20,15 +19,15 @@ export const FullBlog = ({ blog }: FullBlogtype) => {
     const [currentDate, setCurrentDate] = useState(new Date());
    
 
-    const [content, setContent] = useState(blog.content);
+//     const [content, setContent] = useState(blog.content);
 
-  const handleImageUpload = (event: { target: { files: any[]; }; }) => {
-    const file = event.target.files[0];
-    // Upload the image file to the server and get the URL
-    const imageUrl = 'https://example.com/image-url'; // Replace with actual image URL
-    // Append the image URL to the content
-    setContent(content + `\n\n![Alt text](${imageUrl})`);
-  };
+//   const handleImageUpload = (event: { target: { files: any[]; }; }) => {
+//     const file = event.target.files[0];
+//     // Upload the image file to the server and get the URL
+//     const imageUrl = 'https://example.com/image-url'; // Replace with actual image URL
+//     // Append the image URL to the content
+//     setContent(content + `\n\n![Alt text](${imageUrl})`);
+//   };
 
     //data
     useEffect(() => {
@@ -46,10 +45,10 @@ export const FullBlog = ({ blog }: FullBlogtype) => {
         day: 'numeric',
     });
     // Function to handle edit button click
-    const handleEditClick = () => {
-        // Navigate to the edit page with the postId
-        navigate(`/edit-blog/${postId}`);
-    };
+    // const handleEditClick = () => {
+    //     // Navigate to the edit page with the postId
+    //     navigate(`/edit-blog/${postId}`);
+    // };
 
     return (
         <div>
